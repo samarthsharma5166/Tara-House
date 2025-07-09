@@ -34,13 +34,21 @@ const Page = async({ searchParams }: {searchParams: Promise<{
     if ((await searchParams).companyId) query.append("companyId", (await searchParams).companyId!);
     if ((await searchParams).categoryId) query.append("categoryId", (await searchParams).categoryId!);
 
-    const res = await axiosInstance.get(`/product?${query.toString()}`);
+    let products: Product[] = [];
+    let total:number = 0;
+    try {
+        const res = await axiosInstance.get(`/product?${query.toString()}`);
+        products = res.data.products;
+        total = Number(res.data.havemore);
+    } catch (err) {
+        console.error("Failed to fetch products:", err);
+    }
     const companies = await axiosInstance.get('/company').then((res)=>res.data);
     const category = await axiosInstance.get('/category').then((res) => res.data);
     console.log("company", companies);
     console.log("category",category);
-    const products: Product[] = res.data.products;
-    const total: number = Number(res.data.havemore); // You need to send `total` from backend
+    // const products: Product[] = res.data.products;
+    // const total: number = Number(res.data.havemore); // You need to send `total` from backend
 
     const totalPages = Math.ceil(total / LIMIT);
     console.log(totalPages);
