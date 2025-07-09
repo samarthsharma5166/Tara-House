@@ -58,7 +58,7 @@ const Page = async({ searchParams }: {searchParams: Promise<{
             <Navbar />
             <header className="border-b bg-white sticky top-0 z-40">
                 <div className="flex justify-between px-4 py-4">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
                         <Store className="h-8 w-8 text-primary" />
                         <div>
                             <h1 className="alegreya-sans-extrabold text-3xl font-extrabold">Product Catalog</h1>
@@ -76,7 +76,7 @@ const Page = async({ searchParams }: {searchParams: Promise<{
                 </div>
             </header>
 
-            <div className="mt-4 flex justify-center gap-4 w-screen flex-wrap">
+            <div className="mt-4 flex justify-center px-4 gap-4 w-screen flex-wrap">
                 {products.map((product, idx) => (
                     <ProductCard2 key={idx} product={product} />
                 ))}
