@@ -14,7 +14,7 @@ dotenv.config();
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: "https://tara-house-anupsharma1525-gmailcoms-projects.vercel.app/",
+    origin: "*",
     credentials: true,
   })
 );
