@@ -138,7 +138,7 @@ const ProductPage = async ({ params }: {
               <div className="flex gap-3">
                 <a
                   href={`https://wa.me/918077989856?text=${encodeURIComponent(
-                    `Hello, I'm interested in the product "${product.name}" (ID: ${product.id}).\nHere is the product link: http://localhost:3001/product/${product.id}`
+                    `Hello, I'm interested in the product "${product.name}" (ID: ${product.id}).\nHere is the product link: https://tara-house-user.onrender.com/product/${product.id}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
