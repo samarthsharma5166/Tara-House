@@ -14,7 +14,10 @@ dotenv.config();
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: ["https://tara-house.onrender.com"],
+    origin: [
+      "https://tara-house.onrender.com",
+      "https://tara-house-user.onrender.com",
+    ],
     credentials: true,
   })
 );
