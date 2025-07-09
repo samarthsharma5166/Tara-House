@@ -67,6 +67,7 @@ export const signIn = async (req: Request, res: Response, next: NextFunction) =>
     const cookieOption = {
       httpOnly: true,
       secure: true,
+      sameSite: "none" as "none", // crucial for cross-site cookies
     };
     res.cookie("token", token, cookieOption);
     res.status(200).json({

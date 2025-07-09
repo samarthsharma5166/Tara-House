@@ -11,6 +11,7 @@ import{ v2 as cloudinary} from "cloudinary";
 import dotenv from 'dotenv'
 dotenv.config();
 // middleware
+app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL as string, process.env.ADMIN_URL as string],
