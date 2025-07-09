@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import StoreProvider from "./StoreProvider";
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  // weight: [""], // Specify weights if needed
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

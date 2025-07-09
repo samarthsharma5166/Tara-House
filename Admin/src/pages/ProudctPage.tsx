@@ -119,7 +119,7 @@ function ProudctPage() {
     setPreview((prevPreview) => prevPreview.filter((_, i) => i !== index));
   }
 
-  function handleDelet(id){
+  function handleDelet(id:number){
     dispatch(deleteProduct(id));
   }
 

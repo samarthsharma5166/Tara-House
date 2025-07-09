@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc -b",
     "migrate": "npx prisma migrate dev",
-    "start": "npm run migrate && npm run build && node ./dist/index.js"
+    "start": "npm run build && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",

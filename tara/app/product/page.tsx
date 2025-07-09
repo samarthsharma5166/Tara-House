@@ -8,27 +8,31 @@ import { Store } from "lucide-react";
 import Link from "next/link";
 
 
-interface PageProps {
-    searchParams: {
-        page?: string;
-        companyId?: string;
-        categoryId?: string;
-    };
-}
+// interface PageProps {
+//     searchParams: {
+//         page?: string;
+//         companyId?: string;
+//         categoryId?: string;
+//     };
+// }
 
 
 const LIMIT = 20;
 
-const Page = async ({ searchParams }: PageProps) => {
-    const currentPage = parseInt(searchParams.page || "1", 10);
+const Page = async({ searchParams }: {searchParams: Promise<{
+    page?: string;
+    companyId?: string;
+    categoryId?: string;
+}>}) => {
+    const currentPage = parseInt((await searchParams).page || "1", 10);
     const offset = (currentPage - 1) * LIMIT;
     const query = new URLSearchParams({
         page: offset.toString(),
         limit: LIMIT.toString(),
     });
 
-    if (searchParams.companyId) query.append("companyId", searchParams.companyId);
-    if (searchParams.categoryId) query.append("categoryId", searchParams.categoryId);
+    if ((await searchParams).companyId) query.append("companyId", (await searchParams).companyId!);
+    if ((await searchParams).categoryId) query.append("categoryId", (await searchParams).categoryId!);
 
     const res = await axiosInstance.get(`/product?${query.toString()}`);
     const companies = await axiosInstance.get('/company').then((res)=>res.data);

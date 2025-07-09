@@ -17,8 +17,8 @@ const FooterSection = () => {
           </div>
           {/* content */}
           <div className="mt-5 md:max-w-96 w-full">
-            <h3 className="text-[17px] workSansMedium font-medium">Let's Start a Conversation</h3>
-            <p className="text-[16px] workSansLight tracking-widest ">Looking to place a bulk crockery order? Want a quote or catalog? We're happy to help.</p>
+            <h3 className="text-[17px] workSansMedium font-medium">Let&apos;s Start a Conversation</h3>
+            <p className="text-[16px] workSansLight tracking-widest ">Looking to place a bulk crockery order? Want a quote or catalog? We&apos;re happy to help.</p>
           </div>
         {/* contact */}
         <div className="mt-5 md:max-w-96 w-full">

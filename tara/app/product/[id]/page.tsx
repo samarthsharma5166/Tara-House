@@ -26,7 +26,7 @@ export interface Product {
 
 
 const ProductPage = async ({ params }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) => {
   // Mock product data based on your schema
 
@@ -51,7 +51,7 @@ const ProductPage = async ({ params }: {
   //     slug: "royal-ceramics"
   //   }
   // };
-  const id = await params.id;
+  const id = (await params).id;
   const product:Product = (await axiosInstance.get(`/product/${id}`)).data.product;
   return (
     <div className="min-h-screen bg-white">
