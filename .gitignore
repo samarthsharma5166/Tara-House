@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Logs
+logs
+*.log
+*.log.*
+log/
+
+# Environment variables
+.env
+.env.*.local
+.env.local
+
+# Next.js
+.next/
+out/
+.next-static/
+
+# React.js
+build/
+
+# Express.js
+dist/
+coverage/
+
+# OS and Editor specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+*.swp
+*.swo
+
+# Optional: remove if using Docker
+docker-compose.override.yml
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Optional: monorepo tools
+turbo/
