@@ -31,7 +31,7 @@ const MobileMenu = () => {
               <Link href={"/"} className="w-full hover:text-white">Home</Link>
           </div>
             <div className="hover:font-bold hover:bg-black hover:text-white text-2xl py-4  border-b border-gray-300 w-full text-center cursor-pointer transition-all duration-300 ease-in-out">
-              <Link href="/products" className="w-full hover:text-white">Products</Link>
+              <Link href="/product" className="w-full hover:text-white">Products</Link>
           </div>
             <div className="hover:font-bold hover:bg-black hover:text-white text-2xl py-4  border-b border-gray-300 w-full text-center cursor-pointer transition-all duration-300 ease-in-out">
               <Link href="/about" className="w-full hover:text-white">About</Link>
