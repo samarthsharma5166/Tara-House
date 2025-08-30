@@ -40,13 +40,13 @@ function ProductCard({ item, onEdit, onDelete }: ProductCardProps) {
 
       {/* Action Buttons */}
       <div className={`absolute top-4 right-4 z-10 flex gap-2 transition-all duration-300 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
-        <button
+        {/* <button
           onClick={() => onEdit?.(item.id)}
           className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
           title="Edit Product"
         >
           <Edit3 className="w-4 h-4" />
-        </button>
+        </button> */}
         <button
           onClick={() => onDelete?.(item.id)}
           className="bg-red-500 hover:bg-red-600 text-white p-2 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"

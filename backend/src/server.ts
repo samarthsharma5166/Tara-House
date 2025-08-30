@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       "https://tara-house.onrender.com",
-      "https://tara-house-user.onrender.com",
+      "https://tara-house-user.onrender.com"
     ],
     credentials: true,
   })
