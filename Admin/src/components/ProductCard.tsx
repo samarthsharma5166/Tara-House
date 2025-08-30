@@ -1,13 +1,13 @@
 import type { Product } from "@/types/types";
 import { useState } from "react";
-import { Edit3, Trash2, Tag, Package, Star, Calendar } from 'lucide-react';
+import {  Trash2, Tag, Package, Star, Calendar } from 'lucide-react';
 interface ProductCardProps {
   item: Product;
-  onEdit?: (id: number) => void;
+  // onEdit?: (id: number) => void;
   onDelete?: (id: number) => void;
 }
 
-function ProductCard({ item, onEdit, onDelete }: ProductCardProps) {
+function ProductCard({ item, onDelete }: ProductCardProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
